@@ -1,0 +1,2 @@
+# recycler-constraint-performance
+用ConstraintLayout 建置RecyclerView Item排版的效能測試
