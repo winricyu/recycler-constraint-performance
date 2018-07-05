@@ -5,9 +5,11 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,9 +22,11 @@ import java.util.List;
 
 public class ScrollingActivity extends AppCompatActivity {
 
+    private static final String TAG = "Scroll";
     private RecyclerView mRecyclerView;
     private RecyclerView.LayoutManager layoutManager;
     private TicketAdapter mTicketAdapter;
+    private DividerItemDecoration mDividerItemDecoration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +49,10 @@ public class ScrollingActivity extends AppCompatActivity {
         for (int i = 0; i < 100; i++) {
             data.add(i + 1);
         }
+
         mTicketAdapter = new TicketAdapter(data);
+        mDividerItemDecoration = new DividerItemDecoration(this.mRecyclerView.getContext(), RecyclerView.VERTICAL);
+        mRecyclerView.addItemDecoration(mDividerItemDecoration);
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.setAdapter(mTicketAdapter);
 
@@ -89,6 +96,7 @@ public class ScrollingActivity extends AppCompatActivity {
         @NonNull
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+//            Log.d(TAG, "onCreateViewHolder() called with: parent = [" + parent + "], viewType = [" + viewType + "]");
             TicketVH ticketVH = null;
             LinearLayout linearLayout;
             View view;
@@ -97,12 +105,12 @@ public class ScrollingActivity extends AppCompatActivity {
 //                case 0:
 
             linearLayout = new LinearLayout(ScrollingActivity.this);
-            linearLayout.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT));
+            linearLayout.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
             linearLayout.setOrientation(LinearLayout.VERTICAL);
             view = LayoutInflater.from(ScrollingActivity.this).inflate(R.layout.item_search_flight_destination, parent, false);
             linearLayout.addView(view);
-            view = LayoutInflater.from(ScrollingActivity.this).inflate(R.layout.item_search_flight_destination, parent, false);
-            linearLayout.addView(view);
+//            view = LayoutInflater.from(ScrollingActivity.this).inflate(R.layout.item_search_flight_destination, parent, false);
+//            linearLayout.addView(view);
             view = LayoutInflater.from(ScrollingActivity.this).inflate(R.layout.item_search_flight_price, parent, false);
             linearLayout.addView(view);
             ticketVH = new TicketVH(linearLayout);
@@ -120,7 +128,7 @@ public class ScrollingActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-
+//            Log.d(TAG, "onBindViewHolder() called with: holder = [" + holder + "], position = [" + position + "]");
         }
 
         @Override
