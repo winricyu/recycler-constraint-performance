@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/panel_outbound"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F9F9F9"
+    tools:layout_editor_absoluteY="25dp">
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_shape_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="62dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_shape_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="44dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="73dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="138dp" />
+
+    <TextView
+        android:id="@+id/txt_flight_from"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/semicircle_left_grey"
+        android:lines="1"
+        android:paddingBottom="4dp"
+        android:paddingStart="33dp"
+        android:paddingTop="4dp"
+        android:text="TPE 台北桃園"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_from_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_shape_left"
+        app:layout_constraintTop_toTopOf="@+id/txt_from_time" />
+
+    <TextView
+        android:id="@+id/txt_flight_to"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/semicircle_left_grey"
+        android:lines="1"
+        android:paddingBottom="4dp"
+        android:paddingStart="33dp"
+        android:paddingTop="4dp"
+
+        android:text="MNL 馬尼拉尼諾依艾奎諾"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_shape_left"
+        app:layout_constraintTop_toBottomOf="@+id/txt_flight_info" />
+
+    <View
+        android:id="@+id/view_circle_1"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/circle_stroke_orange"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_flight_from"
+        app:layout_constraintStart_toStartOf="@+id/txt_flight_from"
+        app:layout_constraintTop_toTopOf="@+id/txt_flight_from" />
+
+    <View
+        android:id="@+id/view_circle_2"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/circle_orange"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_flight_to"
+        app:layout_constraintStart_toStartOf="@+id/txt_flight_to"
+        app:layout_constraintTop_toTopOf="@+id/txt_flight_to" />
+
+    <TextView
+        android:id="@+id/txt_from_date"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:lines="1"
+        android:text="8/27"
+        android:textColor="@color/base_grey_B3"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_shape_left"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/view_dashline"
+        app:layout_goneMarginTop="@dimen/base_margin_m" />
+
+    <TextView
+        android:id="@+id/txt_to_date"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:lines="1"
+        android:text="8/27"
+        android:textColor="@color/base_grey_B3"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_to_time"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_shape_left"
+        app:layout_constraintStart_toStartOf="@+id/guideline5" />
+
+    <TextView
+        android:id="@+id/txt_trans_time"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_margin_m"
+        android:gravity="center"
+        android:lines="1"
+        android:text="4h 0m"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_dashline"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+        app:layout_constraintStart_toEndOf="@+id/view_dashline"
+        app:layout_constraintTop_toTopOf="@+id/view_dashline"
+        app:layout_goneMarginBottom="0dp"
+        app:layout_goneMarginTop="0dp" />
+
+    <TextView
+        android:id="@+id/txt_from_time"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:lines="1"
+        android:text="09:40"
+        android:textColor="@color/base_main"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/txt_flight_from"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/txt_from_date" />
+
+
+    <TextView
+        android:id="@+id/txt_to_time"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:text="12:05"
+        android:textColor="@color/base_main"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_flight_to"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_shape_left"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/txt_flight_to" />
+
+    <View
+        android:id="@+id/view_dashline"
+        android:layout_width="2dp"
+        android:layout_height="44dp"
+        android:background="@drawable/dash_line_verticle"
+        app:layout_constraintStart_toStartOf="@+id/guideline_line"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_linkline"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="@color/base_main"
+        app:layout_constraintBottom_toTopOf="@+id/view_circle_2"
+        app:layout_constraintStart_toStartOf="@+id/guideline_line"
+        app:layout_constraintTop_toBottomOf="@+id/view_circle_1" />
+
+    <android.support.constraint.Group
+        android:id="@+id/group_pre_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="view_dashline,txt_trans_time" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier_trans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="view_dashline,txt_trans_time,txt_from_date"
+        tools:layout_editor_absoluteY="567dp" />
+
+    <TextView
+        android:id="@+id/txt_flight_duration"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:lines="1"
+        android:text="2h 25m"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_text"
+        app:layout_constraintTop_toBottomOf="@+id/txt_flight_from" />
+
+    <TextView
+        android:id="@+id/txt_flight_airline"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:lines="1"
+        android:text="菲律賓航空"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_text"
+        app:layout_constraintTop_toBottomOf="@+id/txt_flight_duration" />
+
+    <TextView
+        android:id="@+id/txt_flight_info"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:lines="1"
+        android:text="PR 895 經濟艙"
+        android:textColor="@color/base_grey_BA"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_text"
+        app:layout_constraintTop_toBottomOf="@+id/txt_flight_airline" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="8dp" />
+
+    <ImageView
+        android:id="@+id/img_airline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_flight_to"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_text"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/txt_flight_from"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="95dp" />
+
+
+</android.support.constraint.ConstraintLayout>

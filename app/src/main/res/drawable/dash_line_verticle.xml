@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--設定左右邊界負值，讓線段可超出View容器，以貼齊邊界-->
+    <item
+        android:left="-300dp"
+        android:right="-300dp">
+        <rotate
+            android:drawable="@drawable/dashline_grey_2"
+            android:fromDegrees="90"
+            android:toDegrees="90"
+            android:visible="true" />
+    </item>
+</layer-list>

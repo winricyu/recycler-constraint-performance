@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--base顏色-->
+    <color name="base_main">#FF8C77</color><!--主色-->
+    <color name="base_background">#FFFFFF</color><!--基本頁面背景色-->
+    <color name="base_text">#4A4A4A</color><!--基本文字色-->
+    <color name="base_accent">#FD5739</color><!--重點色-->
+    <color name="base_accent_dark">#B3FD5739</color><!--重點色 深-->
+    <color name="base_disable">#DCDCDC</color><!--元件禁用色-->
+    <color name="base_logo">#e84219</color>
+    <!--灰階-->
+    <color name="base_grey_EE">#EEEEEE</color>
+    <color name="base_grey_C4">#C4C4C4</color>
+    <color name="base_grey_BD">#BDBDBD</color>
+    <color name="base_grey_B8">#B8B8B8</color>
+    <color name="base_grey_E2">#E2E2E2</color>
+    <color name="base_grey_F2">#F2F2F2</color>
+    <color name="base_grey_B3">#B3B3B3</color>
+    <color name="base_grey_F0">#F0F0F0</color>
+    <color name="base_grey_E0">#E0E0E0</color>
+    <color name="base_grey_BA">#BABABA</color>
+    <color name="base_grey_F9">#F9F9F9</color>
+    <color name="base_grey_BE">#BEBEBE</color>
+    <color name="base_grey_F1">#F1F1F1</color>
+    <color name="base_grey_3D">#3D3D3D</color>
+
+    <color name="white">#FFFFFF</color>
+    <!--分割線以上為Guildline-->
+</resources>
